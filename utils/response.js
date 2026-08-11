@@ -10,4 +10,14 @@ function sendResponse(
   });
 }
 
+function sendError(res, message = "Terjadi kesalahan pada server", code = 500) {
+  return sendResponse(res, {
+    code,
+    success: false,
+    message,
+    data: null,
+  });
+}
+
 module.exports = sendResponse;
+module.exports.sendError = sendError;
