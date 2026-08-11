@@ -82,6 +82,15 @@ body {
   animation: fadeIn 0.25s ease-out forwards;
 }
 
+/* Interactive Badge Transitions */
+.badge-pill {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.badge-pill:hover {
+  transform: scale(1.04);
+}
+
 /* Toast Container */
 #toast-container {
   position: fixed;
