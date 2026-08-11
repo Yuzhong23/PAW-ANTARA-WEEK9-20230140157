@@ -94,8 +94,8 @@ npm install
 npm run seed
 ```
 Data dummy yang dibuat:
-- **User 1**: `username: rizki` | `password: password123`
-- **User 2**: `username: budi` | `password: password123`
+- **User 1**: `username: fathur` | `password: password123`
+- **User 2**: `username: yuzhong` | `password: password123`
 - Beberapa kategori dan todo untuk testing.
 
 ### 5. Jalankan Server

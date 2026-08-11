@@ -17,18 +17,18 @@ async function seed() {
 
     // 1. Buat User dummy
     const [user1] = await User.findOrCreate({
-      where: { username: "rizki" },
+      where: { username: "fathur" },
       defaults: { password: hashedPassword },
     });
 
     const [user2] = await User.findOrCreate({
-      where: { username: "budi" },
+      where: { username: "yuzhong" },
       defaults: { password: hashedPassword },
     });
 
     console.log("User dummy siap:", user1.username, "&", user2.username);
 
-    // 2. Buat Kategori dummy untuk user1 (rizki)
+    // 2. Buat Kategori dummy untuk user1 (fathur)
     const [catKuliah] = await Category.findOrCreate({
       where: { name: "Kuliah & Tugas", user_id: user1.id },
       defaults: { color: "#3B82F6", icon: "book-open" },
@@ -44,7 +44,7 @@ async function seed() {
       defaults: { color: "#F59E0B", icon: "heart" },
     });
 
-    // Kategori untuk user2 (budi)
+    // Kategori untuk user2 (yuzhong)
     const [catUmum] = await Category.findOrCreate({
       where: { name: "Aktivitas Harian", user_id: user2.id },
       defaults: { color: "#8B5CF6", icon: "sun" },
@@ -105,7 +105,7 @@ async function seed() {
           user_id: user1.id,
           category_id: catKerja.id,
         },
-        // Todo untuk user2 (budi)
+        // Todo untuk user2 (yuzhong)
         {
           title: "Belajar Express Session dan Cookies",
           description:
@@ -125,8 +125,8 @@ async function seed() {
     console.log("\nSeeding database selesai ✅");
     console.log("-----------------------------------------");
     console.log("Kredensial Login Testing:");
-    console.log("  1) username: rizki  | password: password123");
-    console.log("  2) username: budi   | password: password123");
+    console.log("  1) username: fathur  | password: password123");
+    console.log("  2) username: yuzhong | password: password123");
     console.log("-----------------------------------------");
 
     process.exit(0);
